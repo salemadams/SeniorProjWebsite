@@ -1,4 +1,13 @@
 <div class="card">
-    <p-menubar [model]="items"/>
-  <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')"></p-inputSwitch>
+    <p-toolbar>
+      <div class="p-toolbar-group-start gap-7">
+        <p-button class="" label="Home" icon="pi pi-home" routerLink="/"></p-button>
+        <p-button label="Project" icon="pi pi-clipboard" routerLink="/project"></p-button>
+      </div>
+      <div class="p-toolbar-group-end gap-5">
+      <i *ngIf="checked" class="pi pi-moon"></i>
+      <i *ngIf="!checked" class="pi pi-sun"></i>
+      <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')"></p-inputSwitch>
+      </div>
+    </p-toolbar>
 </div>

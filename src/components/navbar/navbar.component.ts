@@ -9,15 +9,17 @@ import {RippleModule} from 'primeng/ripple';
 import {InputSwitchModule} from "primeng/inputswitch";
 import {ThemeService} from "../../services/theme.service";
 import {FormsModule} from "@angular/forms";
+import {ToolbarModule} from "primeng/toolbar";
+import {Button} from "primeng/button";
+import {InputIconModule} from "primeng/inputicon";
 
 @Component({
     selector: "navbar",
     templateUrl: "navbar.component.html",
     standalone: true,
-  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule, CommonModule, InputSwitchModule, FormsModule]
+  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, RippleModule, CommonModule, InputSwitchModule, FormsModule, ToolbarModule, Button, InputIconModule]
 })
 export class NavbarComponent implements OnInit {
-    items: MenuItem[] | undefined;
     checked: boolean = true;
     selectedTheme: string = 'dark';
 
@@ -26,18 +28,6 @@ export class NavbarComponent implements OnInit {
 
     ngOnInit() {
       this._themeService.switchTheme(this.selectedTheme);
-        this.items = [
-            {
-                label: 'Home',
-                icon: 'pi pi-home',
-                routerLink: '/'
-            },
-            {
-                label: 'Project',
-                icon: 'pi pi-clipboard',
-                routerLink: '/project'
-            },
-        ]
     }
 
   onThemeChange(theme: string) {
