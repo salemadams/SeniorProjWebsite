@@ -1,4 +1,4 @@
-<h1 class="flex text-3xl justify-center mt-3">Meet the team</h1>
+<h1 class="flex text-3xl justify-center mt-3 headerStyle">Meet the team</h1>
 <p-divider></p-divider>
 <div class="flex justify-center items-center gap-2">
   @for(card of cardInfo; track card)
@@ -16,7 +16,7 @@
           <p-overlayPanel #op [style]="{width: '320px'}">
             <div class="flex flex-col gap-2">
               <span>
-                Email: 
+                Email:
                 <p-button (onClick)="copy(card.email)" label="{{ card.email }}"></p-button>
               </span>
               <span>
