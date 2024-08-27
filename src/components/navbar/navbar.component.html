@@ -1,3 +1,4 @@
 <div class="card">
     <p-menubar [model]="items"/>
+  <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')"></p-inputSwitch>
 </div>
