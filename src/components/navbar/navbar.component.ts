@@ -28,11 +28,6 @@ export class NavbarComponent implements OnInit {
                 icon: 'pi pi-clipboard',
                 routerLink: '/project'
             },
-            {
-                label: 'Contact',
-                icon: 'pi pi-users',
-                routerLink: 'contact'
-            }
         ]
     }
 }
