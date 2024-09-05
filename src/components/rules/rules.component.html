@@ -1,0 +1,31 @@
+<h1>The Board</h1>
+<p-image
+  alt="Image Not Found"
+  src="https://content.instructables.com/FPI/EUBU/FD80BVW8/FPIEUBUFD80BVW8.jpg?auto=webp&frame=1&fit=bounds&md=2acaa2c8483d0b367bbe761f429b3ee6">
+</p-image>
+<h1>Board Setup</h1>
+<p>The board setup is as shown. Notice that it is structured such that the bottom right tile of each players respective
+  side is a white tile.</p>
+<h1>Game Pieces</h1>
+<p-carousel
+  [value]="pieces"
+  [numVisible]="3"
+  [circular]="true"
+  [responsiveOptions]="responsiveOptions">
+    <ng-template let-piece pTemplate="piece">
+      <div class="border-1 surface-border border-round m-2 p-3">
+        <p-image
+         [src]="piece.image">
+        </p-image>
+        <p>{{ piece.name }}</p>
+        <div class="flex gap-3 mt-1">
+          <p-button (click)="op.toggle($event)" label="Info" severity="secondary" class="w-full" styleClass="w-full"/>
+          <p-overlayPanel #op [style]="{width: '320px'}">
+            <div class="flex flex-col gap-2">
+              {{ piece.description }}
+            </div>
+          </p-overlayPanel>
+        </div>
+      </div>
+    </ng-template>
+</p-carousel>
