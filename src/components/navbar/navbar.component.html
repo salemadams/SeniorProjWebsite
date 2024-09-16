@@ -5,10 +5,5 @@
         <p-button label="Rules" icon="pi pi-map" routerLink="/rules"></p-button>
         <p-button label="Play" icon="pi pi-desktop" routerLink="/game"></p-button>
       </div>
-      <div class="p-toolbar-group-end gap-5">
-      <i *ngIf="checked" class="pi pi-moon"></i>
-      <i *ngIf="!checked" class="pi pi-sun"></i>
-      <p-inputSwitch [(ngModel)]="checked" (click)="onThemeChange(checked ? 'dark' : 'light')"></p-inputSwitch>
-      </div>
     </p-toolbar>
 </div>

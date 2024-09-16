@@ -29,16 +29,7 @@
             "styles": [
               "src/styles.css",
               "node_modules/primeng/resources/primeng.min.css",
-              {
-                "input": "src/dark.css",
-                "bundleName": "dark",
-                "inject": false
-              },
-              {
-                "input": "src/light.css",
-                "bundleName": "light",
-                "inject": false
-              }
+              "src/light.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -101,16 +92,7 @@
             "styles": [
               "src/styles.css",
               "node_modules/primeng/resources/primeng.min.css",
-              {
-                "input": "src/dark.css",
-                "bundleName": "dark",
-                "inject": false
-              },
-              {
-                "input": "src/light.css",
-                "bundleName": "light",
-                "inject": false
-              }
+              "src/light.css"
             ],
             "scripts": []
           }

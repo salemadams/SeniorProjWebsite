@@ -4,6 +4,9 @@ import {CarouselModule} from "primeng/carousel";
 import {PieceInfo} from "../../models/PieceInfo";
 import {Button} from "primeng/button";
 import {OverlayPanelModule} from "primeng/overlaypanel";
+import {CardModule} from "primeng/card";
+import {PanelModule} from "primeng/panel";
+import {DividerModule} from "primeng/divider";
 
 @Component({
   selector: "app-rules",
@@ -13,7 +16,10 @@ import {OverlayPanelModule} from "primeng/overlaypanel";
     ImageModule,
     CarouselModule,
     Button,
-    OverlayPanelModule
+    OverlayPanelModule,
+    CardModule,
+    PanelModule,
+    DividerModule
   ]
 })
 export class RulesComponent implements OnInit {
