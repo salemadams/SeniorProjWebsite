@@ -1,8 +1,14 @@
-
-    <p-toolbar>
-      <div class="p-toolbar-group-start gap-7">
-        <p-button label="Home" icon="pi pi-home" routerLink="/"></p-button>
-        <p-button label="Rules" icon="pi pi-map" routerLink="/rules"></p-button>
-        <p-button label="Play" icon="pi pi-desktop" routerLink="/game"></p-button>
-      </div>
-    </p-toolbar>
+<div class="card">
+  <p-tabMenu [model]="items">
+    <ng-template pTemplate="item" let-item>
+      <ng-container>
+        <a [routerLink]="item.route" class="p-menuitem-link">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">
+                        {{ item.label }}
+                    </span>
+        </a>
+      </ng-container>
+    </ng-template>
+  </p-tabMenu>
+</div>
