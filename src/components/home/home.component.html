@@ -1,10 +1,13 @@
-<h1 class="flex text-3xl justify-center m-7 headerStyle">Overview</h1>
-<p class="text-center">
-  Chess is a classic game that was created in India during the 6th century. The core goal of the game is to put the opponents "king" piece in check. Meaning that it is not able to move without being captured by one of the opponents pieces.
-  Our version is another classic take on chess, with the addition of leveled AI to allow a player to enjoy the game by themselves at different difficulties.
-</p>
-<h1 class="flex text-3xl justify-center m-7 headerStyle">Meet the team</h1>
-<div class="flex justify-center items-center gap-2">
+<div class="flex flex-col items-center justify-center p-5">
+  <h1 class="header-style m-7">Overview</h1>
+  <p class="text-center leading-relaxed w-1/2">
+    Chess is a classic game that was created in India during the 6th century. The core goal of the game is to put the opponents "king" piece in check, meaning that it is not able to move without being captured by one of the opponent's pieces. Our version is another classic take on chess, with the addition of leveled AI to allow a player to enjoy the game by themselves at different difficulties.
+  </p>
+</div>
+
+
+<h1 class="flex text-3xl justify-center m-7 header-style">Meet the team</h1>
+<div class="flex justify-center items-center gap-4">
   @for(card of cardInfo; track card)
   {
     <p-card [header]="card.name" [subheader]="card.role" [style]="{ width: '360px' }">

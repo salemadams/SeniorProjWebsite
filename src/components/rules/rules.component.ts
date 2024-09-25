@@ -7,6 +7,8 @@ import {OverlayPanelModule} from "primeng/overlaypanel";
 import {CardModule} from "primeng/card";
 import {PanelModule} from "primeng/panel";
 import {DividerModule} from "primeng/divider";
+import {AccordionModule} from "primeng/accordion";
+import {FieldsetModule} from "primeng/fieldset";
 
 @Component({
   selector: "app-rules",
@@ -19,7 +21,9 @@ import {DividerModule} from "primeng/divider";
     OverlayPanelModule,
     CardModule,
     PanelModule,
-    DividerModule
+    DividerModule,
+    AccordionModule,
+    FieldsetModule
   ]
 })
 export class RulesComponent implements OnInit {

@@ -4,8 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.headerStyle {
-  color: #4b5563;
+.header-style {
+  color: #27374D;
   font-size: 2.0rem;
   font-weight: 700;
+}
+
+.body {
+  display: block;
+  background-color: #9DB2BF;
+  min-height: 100vh;
+}
+
+.card-color {
+  color: #526D82;
 }
