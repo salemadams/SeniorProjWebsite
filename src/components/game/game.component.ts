@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
 
 @Component({
-  selector: 'app-game',
-  standalone: true,
-  imports: [
-    RouterLink
-  ],
+  selector: 'app-game-embed',
   templateUrl: './game.component.html',
-  styleUrl: './game.component.css'
+  standalone: true
 })
-export class GameComponent {
+export class GameComponent {}
 
-}
