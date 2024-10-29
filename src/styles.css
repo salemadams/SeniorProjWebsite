@@ -19,3 +19,7 @@
 .card-color {
   color: #526D82;
 }
+
+.custom-card {
+  background-color: white !important;
+}

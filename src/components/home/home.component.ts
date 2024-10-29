@@ -5,6 +5,8 @@ import {CardInformation} from "../../models/CardInformation";
 import {DividerModule} from "primeng/divider";
 import {OverlayPanelModule} from "primeng/overlaypanel";
 import {CopyClipboardService} from "../../services/copy-clipboard.service";
+import {DialogModule} from "primeng/dialog";
+import {DockModule} from "primeng/dock";
 
 @Component({
   selector: 'app-home',
@@ -14,11 +16,16 @@ import {CopyClipboardService} from "../../services/copy-clipboard.service";
     ButtonModule,
     DividerModule,
     OverlayPanelModule,
+    DialogModule,
+    DockModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  visible: boolean = false;
+  dialogText: string = '';
 
   constructor(private _copyClipboard: CopyClipboardService) {}
 
@@ -29,7 +36,12 @@ export class HomeComponent {
     { name: 'Michael Barber', role: 'Developer', description: 'Placeholder', phoneNumber: '', email: ''},
   ]
 
-  copy(text: string) {
+  copy(text: string, dialogText: string) {
     this._copyClipboard.copyText(text);
+    this.visible = true;
+    this.dialogText = dialogText;
+    setTimeout(() => {
+      this.visible = false;
+    }, 1250);
   }
 }
