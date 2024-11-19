@@ -30,10 +30,10 @@ export class HomeComponent {
   constructor(private _copyClipboard: CopyClipboardService) {}
 
   protected cardInfo: CardInformation[] = [
-    { name: 'Salem Adams', role: 'Developer', description: 'Placeholder', phoneNumber: '470-330-1041', email: 'salemadamscs@gmail.com' },
-    { name: 'Brandon Cantilang', role: 'Developer', description: 'Placeholder', phoneNumber: '', email: '' },
-    { name: 'Nick Rath', role: 'Developer', description: 'Placeholder', phoneNumber: '', email: ''},
-    { name: 'Michael Barber', role: 'Developer', description: 'Placeholder', phoneNumber: '', email: ''},
+    { name: 'Brandon Cantilang', role: 'Team Lead/Documentation', phoneNumber: '(678)-230-7931', email: 'brandoncantilang@gmail.com', imageUrl: 'assets/BrandonPhoto.png' },
+    { name: 'Salem Adams', role: 'Developer', phoneNumber: '(470)-330-1041', email: 'salemadamscs@gmail.com', imageUrl: 'assets/SalemPhoto.png' },
+    { name: 'Nick Rath', role: 'Developer', phoneNumber: '(404)-441-9239', email: 'nicholasrath@protonmail.com', imageUrl: 'assets/NickPhoto.png'},
+    { name: 'Michael Barber', role: 'Documentation', phoneNumber: '(770)-548-6750', email: 'barbermichael51@gmail.com', imageUrl: 'assets/MichaelPhoto.png'},
   ]
 
   copy(text: string, dialogText: string) {
