@@ -7,6 +7,7 @@ import {OverlayPanelModule} from "primeng/overlaypanel";
 import {CopyClipboardService} from "../../services/copy-clipboard.service";
 import {DialogModule} from "primeng/dialog";
 import {DockModule} from "primeng/dock";
+import {InputIconModule} from "primeng/inputicon";
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ import {DockModule} from "primeng/dock";
     OverlayPanelModule,
     DialogModule,
     DockModule,
+    InputIconModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
