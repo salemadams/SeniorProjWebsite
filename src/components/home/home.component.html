@@ -13,24 +13,26 @@
 
 <h1 class="flex text-3xl justify-center m-7 header-style">Meet the team</h1>
 <div class="flex justify-center items-center gap-4">
-  @for(card of cardInfo; track card)
-  {
+  @for (card of cardInfo; track card) {
     <p-card [header]="card.name" [subheader]="card.role" [style]="{ width: '360px' }">
       <ng-template pTemplate="header">
         <img alt="Card" [src]="card.imageUrl"/>
       </ng-template>
       <ng-template pTemplate="footer">
         <div class="flex gap-3 mt-1">
-          <p-button (click)="op.toggle($event)" label="Contact" severity="secondary" class="w-full" styleClass="w-full"/>
+          <p-button (click)="op.toggle($event)" label="Contact" severity="secondary" class="w-full"
+                    styleClass="w-full"/>
           <p-overlayPanel #op [style]="{width: '320px'}">
             <div class="flex flex-col gap-2">
               <span>
                 Email:
-                <p-button pTooltip="Copy Email" (onClick)="copy(card.email, 'Email Copied')" label="{{ card.email }}"></p-button>
+                <p-button pTooltip="Copy Email" (onClick)="copy(card.email, 'Email Copied')"
+                          label="{{ card.email }}"></p-button>
               </span>
               <span>
                 Phone:
-                <p-button pTooltip="Copy Phone" (onClick)="copy(card.phoneNumber, 'Phone Copied')" label="{{ card.phoneNumber }}"></p-button>
+                <p-button pTooltip="Copy Phone" (onClick)="copy(card.phoneNumber, 'Phone Copied')"
+                          label="{{ card.phoneNumber }}"></p-button>
               </span>
             </div>
           </p-overlayPanel>
@@ -41,16 +43,21 @@
 </div>
 
 <div class="flex flex-col justify-center items-center pt-10">
-  <a href="https://github.com/salemadams/SeniorProjWebsite" target="_blank">
-    <i class="pi pi-github mb-5" style="font-size: 2rem;"></i>
-  </a>
+  <div class=" flex flex-row gap-2">
+  <i class="pi pi-github mb-5" style="font-size: 1rem;"></i>
+  <a class="text-blue-500 underline" href="https://github.com/salemadams/SeniorProjWebsite" target="_blank">Website Repo</a>
+  </div>
+  <div class="flex flex-row gap-2 pr-3">
+  <i class="pi pi-github mb-5" style="font-size: 1rem;"></i>
+  <a class="text-blue-500 underline" href="https://github.com/brandoncantilang/ChessAI" target="_blank">Chess Repo</a>
+  </div>
   CS 4850/04 2024
 </div>
 
 <p-dialog showHeader="false" [(visible)]="visible" [modal]="true" position="bottom" closable="false" draggable="false">
   <ng-template pTemplate="headless">
-  <div class="bg-white flex flex-auto justify-center items-center rounded w-36 h-20 text-center">{{ dialogText }}
-  </div>
-</ng-template>
+    <div class="bg-white flex flex-auto justify-center items-center rounded w-36 h-20 text-center">{{ dialogText }}
+    </div>
+  </ng-template>
 </p-dialog>
 
